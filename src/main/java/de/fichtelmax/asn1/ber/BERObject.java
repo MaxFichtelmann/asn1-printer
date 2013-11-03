@@ -2,8 +2,6 @@ package de.fichtelmax.asn1.ber;
 
 import javax.xml.bind.DatatypeConverter;
 
-import org.bouncycastle.util.Arrays;
-
 public class BERObject
 {
     private byte[] type;
@@ -39,7 +37,12 @@ public class BERObject
     
     public byte[] getEncoded()
     {
-        return Arrays.concatenate( type, length, value );
+        byte[] data = new byte[type.length + length.length + value.length];
+        System.arraycopy( type, 0, data, 0, type.length );
+        System.arraycopy( length, 0, data, type.length, length.length );
+        System.arraycopy( value, 0, data, type.length + length.length, value.length );
+        
+        return data;
     }
     
     public String getName()
