@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.fichtelmax.asn1</groupId>
 	<artifactId>asn1-printer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-ms1</version>
 
 	<properties>
 		<maven.compiler.source>1.6</maven.compiler.source>
