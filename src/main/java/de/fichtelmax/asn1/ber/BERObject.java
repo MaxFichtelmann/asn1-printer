@@ -52,7 +52,7 @@ public class BERObject
     
     public String getValueString()
     {
-        return DatatypeConverter.printBase64Binary( value );
+        return DatatypeConverter.printBase64Binary( getEncoded() );
     }
     
     @Override
