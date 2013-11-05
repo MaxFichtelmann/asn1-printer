@@ -8,3 +8,8 @@ Usage
 -----
 
 java -jar asn1-printer-${version}.jar < hex.txt
+
+
+Build status
+------------
+[![Build Status](https://travis-ci.org/MaxFichtelmann/asn1-printer.png)](https://travis-ci.org/MaxFichtelmann/asn1-printer)
