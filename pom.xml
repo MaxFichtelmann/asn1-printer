@@ -3,12 +3,32 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.fichtelmax.asn1</groupId>
 	<artifactId>asn1-printer</artifactId>
-	<version>1.0.0-SNAPHOT</version>
+	<version>1.0.0-m2-SNAPHOT</version>
+	<packaging>jar</packaging>
+
+	<name>asn1-printer</name>
+	<description>Utilities to display ASN1 BER encoded data in readable String form</description>
+	<url>https://github.com/MaxFichtelmann/asn1-printer</url>
+
+	<licenses>
+		<license>
+			<name>GNU LESSER GENERAL PUBLIC LICENSE - Version 3</name>
+			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/MaxFichtelmann/asn1-printer.git</url>
+	</scm>
 
 	<properties>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<license.licenseName>lgpl_v3</license.licenseName>
+		<license.inceptionYear>2013</license.inceptionYear>
+		<license.organizationName>Max Fichtelmann</license.organizationName>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,11 +66,24 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<addClasspath>true</addClasspath>
 							<mainClass>de.fichtelmax.asn1.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>first</id>
+						<goals>
+							<goal>update-file-header</goal>
+						</goals>
+						<phase>process-sources</phase>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
